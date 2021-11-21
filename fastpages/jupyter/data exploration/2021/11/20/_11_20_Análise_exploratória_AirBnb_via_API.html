@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Análise exploratória AirBnb via API | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Análise exploratória AirBnb via API" />
+<meta name="author" content="Vinicius Matos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Como acessei um serviço para analizar dados" />
+<meta property="og:description" content="Como acessei um serviço para analizar dados" />
+<link rel="canonical" href="https://vinicius-l-r-matos.github.io/-Repositorio-DS/fastpages/jupyter/data%20exploration/2021/11/20/_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.html" />
+<meta property="og:url" content="https://vinicius-l-r-matos.github.io/-Repositorio-DS/fastpages/jupyter/data%20exploration/2021/11/20/_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-20T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-11-20T00:00:00-06:00","url":"https://vinicius-l-r-matos.github.io/-Repositorio-DS/fastpages/jupyter/data%20exploration/2021/11/20/_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.html","@type":"BlogPosting","headline":"Análise exploratória AirBnb via API","dateModified":"2021-11-20T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://vinicius-l-r-matos.github.io/-Repositorio-DS/fastpages/jupyter/data%20exploration/2021/11/20/_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.html"},"author":{"@type":"Person","name":"Vinicius Matos"},"description":"Como acessei um serviço para analizar dados","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/-Repositorio-DS/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vinicius-l-r-matos.github.io/-Repositorio-DS/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/-Repositorio-DS/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/-Repositorio-DS/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/-Repositorio-DS/about/">About Me</a><a class="page-link" href="/-Repositorio-DS/search/">Search</a><a class="page-link" href="/-Repositorio-DS/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Análise exploratória AirBnb via API</h1><p class="page-description">Como acessei um serviço para analizar dados</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-20T00:00:00-06:00" itemprop="datePublished">
+        Nov 20, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Vinicius Matos</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/-Repositorio-DS/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/-Repositorio-DS/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/-Repositorio-DS/categories/#Data exploration">Data exploration</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Vinicius-L-R-Matos/-Repositorio-DS/tree/master/_notebooks/2020_11_20_Análise_exploratória_AirBnb_via_API.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Vinicius-L-R-Matos/-Repositorio-DS/master?filepath=_notebooks%2F2020_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Vinicius-L-R-Matos/-Repositorio-DS/blob/master/_notebooks/2020_11_20_Análise_exploratória_AirBnb_via_API.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020_11_20_Análise_exploratória_AirBnb_via_API.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Vinicius-L-R-Matos/-Repositorio-DS/blob/master/_notebooks/2020_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>API é um objeto criado por empresas quando tem a intenção de que outros criadores de software desenvolvam produtos associados ao seu serviço.</p>
+<p>Para isso disponibilizam os códigos e instruções para serem usados em outros sites da maneira mais prática para seus usuários.</p>
+<p>A palavra API traduzida é algo como Interface de Programação de Aplicativos.</p>
+<p>Como exercício realizei toda a preparação e limpeza dos dados do dataset a seguir do <a href="https://www.airbnb.com.br/">Airbnb</a></p>
+<p><strong>Dataset</strong></p>
+<p>Este conjunto de dados descreve a atividade de listagem e as métricas em NYC para o ano de 2019.</p>
+<p>Este arquivo de dados inclui todas as informações necessárias para descobrir mais sobre hosts, disponibilidade geográfica, métricas necessárias para fazer previsões e tirar conclusões.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Pr&#233;-requisitos:">Pr&#233; requisitos:<a class="anchor-link" href="#Pr&#233;-requisitos:"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O resultado fica bem fiel. Para usar, necessita de:</p>
+<ul>
+<li>Notebook do Colab aberto</li>
+<li>Noções de Python</li>
+<li>Conexão com a interet</li>
+<li>Url da API que deseja usar</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1---Importando-as-bibliotecas:">1 - Importando as bibliotecas:<a class="anchor-link" href="#1---Importando-as-bibliotecas:"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Duas blibliotecas são necessárias aqui. Pandas e Numpy.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2---Acessando-os-reposit&#243;rios:">2 - Acessando os reposit&#243;rios:<a class="anchor-link" href="#2---Acessando-os-reposit&#243;rios:"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Declarei a url da API, que no caso é um arquivo csv, como uma variável.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">airbnb_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/ManarOmar/New-York-Airbnb-2019/master/AB_NYC_2019.csv&#39;</span>
+<span class="c1"># este é o acesso público para a API</span>
+<span class="n">airbnb_ori</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">airbnb_url</span><span class="p">)</span>
+<span class="n">airbnb</span> <span class="o">=</span> <span class="n">airbnb_ori</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">wrong_spelling</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;manhatann&#39;</span><span class="p">,</span> <span class="s1">&#39;brookln&#39;</span><span class="p">,</span> <span class="s1">&#39;Blookn&#39;</span><span class="p">,</span> <span class="s1">&#39;Quinns&#39;</span><span class="p">,</span><span class="s1">&#39;Broonx&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">random_index</span> <span class="o">=</span> <span class="n">airbnb</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+<span class="n">airbnb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">random_index</span><span class="p">,</span><span class="s1">&#39;neighbourhood_group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrong_spelling</span>
+<span class="n">airbnb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">random_index</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nan&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ao nomear o aquivo para outra variável, posso realizari comando "print()", paraconhecer melhor o incio e algumas métricas.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">airbnb</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             id  ... availability_365
+0          2539  ...              365
+1          2595  ...              355
+2          3647  ...              365
+3          3831  ...              194
+4          5022  ...                0
+...         ...  ...              ...
+48890  36484665  ...                9
+48891  36485057  ...               36
+48892  36485431  ...               27
+48893  36485609  ...                2
+48894  36487245  ...               23
+
+[48895 rows x 16 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3---Carregando-as-aplica&#231;&#245;es:">3 - Carregando as aplica&#231;&#245;es:<a class="anchor-link" href="#3---Carregando-as-aplica&#231;&#245;es:"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Declaro uma df, que será a base para relaizar a análise. Ela abre o mesmo arquivo que fiz upload notebook.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;AB_NYC_2019.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tudo certo. Hora de manipular as linhas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4---Definindo-os-argumentos:">4 - Definindo os argumentos:<a class="anchor-link" href="#4---Definindo-os-argumentos:"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Aqui coloquei na ordem os imóveis com maior quantidade de reviews.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;number_of_reviews&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                                    name  ...  availability_365
+id                                        ...                  
+9145202          Room near JFK Queen Bed  ...               333
+903972        Great Bedroom in Manhattan  ...               293
+903947    Beautiful Bedroom in Manhattan  ...               342
+891117      Private Bedroom in Manhattan  ...               339
+10101135         Room Near JFK Twin Beds  ...               173
+
+[5 rows x 15 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Demonstrndo que propriedades não foram afetadas.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(48895, 15)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Agora quero conhecer estatísticas simples com a função "describe()"</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>host_id</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>price</th>
+      <th>minimum_nights</th>
+      <th>number_of_reviews</th>
+      <th>reviews_per_month</th>
+      <th>calculated_host_listings_count</th>
+      <th>availability_365</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>4.889500e+04</td>
+      <td>48895.000000</td>
+      <td>48895.000000</td>
+      <td>48895.000000</td>
+      <td>48895.000000</td>
+      <td>48895.000000</td>
+      <td>38843.000000</td>
+      <td>48895.000000</td>
+      <td>48895.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>6.762001e+07</td>
+      <td>40.728949</td>
+      <td>-73.952170</td>
+      <td>152.720687</td>
+      <td>7.029962</td>
+      <td>23.274466</td>
+      <td>1.373221</td>
+      <td>7.143982</td>
+      <td>112.781327</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>7.861097e+07</td>
+      <td>0.054530</td>
+      <td>0.046157</td>
+      <td>240.154170</td>
+      <td>20.510550</td>
+      <td>44.550582</td>
+      <td>1.680442</td>
+      <td>32.952519</td>
+      <td>131.622289</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2.438000e+03</td>
+      <td>40.499790</td>
+      <td>-74.244420</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.010000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>7.822033e+06</td>
+      <td>40.690100</td>
+      <td>-73.983070</td>
+      <td>69.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>0.190000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>3.079382e+07</td>
+      <td>40.723070</td>
+      <td>-73.955680</td>
+      <td>106.000000</td>
+      <td>3.000000</td>
+      <td>5.000000</td>
+      <td>0.720000</td>
+      <td>1.000000</td>
+      <td>45.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.074344e+08</td>
+      <td>40.763115</td>
+      <td>-73.936275</td>
+      <td>175.000000</td>
+      <td>5.000000</td>
+      <td>24.000000</td>
+      <td>2.020000</td>
+      <td>2.000000</td>
+      <td>227.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2.743213e+08</td>
+      <td>40.913060</td>
+      <td>-73.712990</td>
+      <td>10000.000000</td>
+      <td>1250.000000</td>
+      <td>629.000000</td>
+      <td>58.500000</td>
+      <td>327.000000</td>
+      <td>365.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>E para conhecer o nome das colunas e quantidade de itens em cada, uso a função "info()"</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 48895 entries, 9145202 to 36487245
+Data columns (total 15 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   name                            48879 non-null  object 
+ 1   host_id                         48895 non-null  int64  
+ 2   host_name                       48874 non-null  object 
+ 3   neighbourhood_group             48895 non-null  object 
+ 4   neighbourhood                   48895 non-null  object 
+ 5   latitude                        48895 non-null  float64
+ 6   longitude                       48895 non-null  float64
+ 7   room_type                       48895 non-null  object 
+ 8   price                           48895 non-null  int64  
+ 9   minimum_nights                  48895 non-null  int64  
+ 10  number_of_reviews               48895 non-null  int64  
+ 11  last_review                     38843 non-null  object 
+ 12  reviews_per_month               38843 non-null  float64
+ 13  calculated_host_listings_count  48895 non-null  int64  
+ 14  availability_365                48895 non-null  int64  
+dtypes: float64(3), int64(6), object(6)
+memory usage: 6.0+ MB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quero ver agora apenas os 5 primeiros valores, com todas as colunas.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>host_id</th>
+      <th>host_name</th>
+      <th>neighbourhood_group</th>
+      <th>neighbourhood</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>room_type</th>
+      <th>price</th>
+      <th>minimum_nights</th>
+      <th>number_of_reviews</th>
+      <th>last_review</th>
+      <th>reviews_per_month</th>
+      <th>calculated_host_listings_count</th>
+      <th>availability_365</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9145202</th>
+      <td>Room near JFK Queen Bed</td>
+      <td>47621202</td>
+      <td>Dona</td>
+      <td>Queens</td>
+      <td>Jamaica</td>
+      <td>40.66730</td>
+      <td>-73.76831</td>
+      <td>Private room</td>
+      <td>47</td>
+      <td>1</td>
+      <td>629</td>
+      <td>2019-07-05</td>
+      <td>14.58</td>
+      <td>2</td>
+      <td>333</td>
+    </tr>
+    <tr>
+      <th>903972</th>
+      <td>Great Bedroom in Manhattan</td>
+      <td>4734398</td>
+      <td>Jj</td>
+      <td>Manhattan</td>
+      <td>Harlem</td>
+      <td>40.82085</td>
+      <td>-73.94025</td>
+      <td>Private room</td>
+      <td>49</td>
+      <td>1</td>
+      <td>607</td>
+      <td>2019-06-21</td>
+      <td>7.75</td>
+      <td>3</td>
+      <td>293</td>
+    </tr>
+    <tr>
+      <th>903947</th>
+      <td>Beautiful Bedroom in Manhattan</td>
+      <td>4734398</td>
+      <td>Jj</td>
+      <td>Manhattan</td>
+      <td>Harlem</td>
+      <td>40.82124</td>
+      <td>-73.93838</td>
+      <td>Private room</td>
+      <td>49</td>
+      <td>1</td>
+      <td>597</td>
+      <td>2019-06-23</td>
+      <td>7.72</td>
+      <td>3</td>
+      <td>342</td>
+    </tr>
+    <tr>
+      <th>891117</th>
+      <td>Private Bedroom in Manhattan</td>
+      <td>4734398</td>
+      <td>Jj</td>
+      <td>Manhattan</td>
+      <td>Harlem</td>
+      <td>40.82264</td>
+      <td>-73.94041</td>
+      <td>Private room</td>
+      <td>49</td>
+      <td>1</td>
+      <td>594</td>
+      <td>2019-06-15</td>
+      <td>7.57</td>
+      <td>3</td>
+      <td>339</td>
+    </tr>
+    <tr>
+      <th>10101135</th>
+      <td>Room Near JFK Twin Beds</td>
+      <td>47621202</td>
+      <td>Dona</td>
+      <td>Queens</td>
+      <td>Jamaica</td>
+      <td>40.66939</td>
+      <td>-73.76975</td>
+      <td>Private room</td>
+      <td>47</td>
+      <td>1</td>
+      <td>576</td>
+      <td>2019-06-27</td>
+      <td>13.40</td>
+      <td>2</td>
+      <td>173</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>E os últimos.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>host_id</th>
+      <th>host_name</th>
+      <th>neighbourhood_group</th>
+      <th>neighbourhood</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>room_type</th>
+      <th>price</th>
+      <th>minimum_nights</th>
+      <th>number_of_reviews</th>
+      <th>last_review</th>
+      <th>reviews_per_month</th>
+      <th>calculated_host_listings_count</th>
+      <th>availability_365</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>34337032</th>
+      <td>1 Bed/ 1 Bath / Columbus Circle/ Balcony</td>
+      <td>131647128</td>
+      <td>Emily</td>
+      <td>Manhattan</td>
+      <td>Upper West Side</td>
+      <td>40.77076</td>
+      <td>-73.98671</td>
+      <td>Entire home/apt</td>
+      <td>190</td>
+      <td>30</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>25</td>
+      <td>181</td>
+    </tr>
+    <tr>
+      <th>34337151</th>
+      <td>STUNNING 2BR ON MCCARREN PARK WITH PARKING SPOT!</td>
+      <td>62014210</td>
+      <td>Sara</td>
+      <td>Brooklyn</td>
+      <td>Greenpoint</td>
+      <td>40.72155</td>
+      <td>-73.94671</td>
+      <td>Entire home/apt</td>
+      <td>700</td>
+      <td>15</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2958912</th>
+      <td>STUNNING! 1BD Jr in Midtown East NY</td>
+      <td>15100977</td>
+      <td>Nataliya</td>
+      <td>Manhattan</td>
+      <td>Midtown</td>
+      <td>40.75969</td>
+      <td>-73.96644</td>
+      <td>Entire home/apt</td>
+      <td>140</td>
+      <td>300</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>34337805</th>
+      <td>Ridgewood Love</td>
+      <td>7505535</td>
+      <td>Magnificent Mohamad</td>
+      <td>Queens</td>
+      <td>Ridgewood</td>
+      <td>40.70513</td>
+      <td>-73.90100</td>
+      <td>Private room</td>
+      <td>149</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <th>36487245</th>
+      <td>Trendy duplex in the very heart of Hell's Kitchen</td>
+      <td>68119814</td>
+      <td>Christophe</td>
+      <td>Manhattan</td>
+      <td>Hell's Kitchen</td>
+      <td>40.76404</td>
+      <td>-73.98933</td>
+      <td>Private room</td>
+      <td>90</td>
+      <td>7</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>23</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Aquele que possui todos os maiores valores.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>host_id                               274321313
+neighbourhood_group               Staten Island
+neighbourhood                          Woodside
+latitude                                40.9131
+longitude                               -73.713
+room_type                           Shared room
+price                                     10000
+minimum_nights                             1250
+number_of_reviews                           629
+reviews_per_month                          58.5
+calculated_host_listings_count              327
+availability_365                            365
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Aquele que possui os mínimos.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>host_id                                      2438
+neighbourhood_group                         Bronx
+neighbourhood                            Allerton
+latitude                                  40.4998
+longitude                                -74.2444
+room_type                         Entire home/apt
+price                                           0
+minimum_nights                                  1
+number_of_reviews                               0
+reviews_per_month                            0.01
+calculated_host_listings_count                  1
+availability_365                                0
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Se existem valores duplicados.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">duplicados</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">duplicados</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Empty DataFrame
+Columns: [name, host_id, host_name, neighbourhood_group, neighbourhood, latitude, longitude, room_type, price, minimum_nights, number_of_reviews, last_review, reviews_per_month, calculated_host_listings_count, availability_365]
+Index: []
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nenhum. Ótimo! Mas ainda podem existir nomes duplicados.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                                                      name  ...  availability_365
+id                                                          ...                  
+9434513                2000sq $2 million 3 story townhouse  ...               363
+1330056                Spacious Loft 5 min to Union Square  ...               359
+482765                       Beautiful Brooklyn Brownstone  ...                12
+18946416                     Beautiful Brooklyn Brownstone  ...               274
+18091991                                         Cozy Room  ...               128
+...                                                    ...  ...               ...
+35461209  Freshly furnished private room - GREAT Location!  ...               219
+2925138                            Steps from Central Park  ...                 0
+35461527        Artsy Private BR in Fort Greene Cumberland  ...               342
+35461700        Artsy Private BR in Fort Greene Cumberland  ...               341
+35461620        Artsy Private BR in Fort Greene Cumberland  ...               305
+
+[989 rows x 15 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">Contabilizadas</span> <span class="mi">989</span> <span class="n">ocorrências</span><span class="o">.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclus&#227;o">Conclus&#227;o<a class="anchor-link" href="#Conclus&#227;o"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A aplicação roda perfeitamente e possibilita ainda exportar a dados gerados para demais usos.</p>
+<p>Acredito que desta forma será mais simples usar este processo mais vezes, ou quem sabe passar à frente.</p>
+<p>O processo pode ser acessado em Notebook Colab no início desta postagem e reproduzido livremente.</p>
+<p>A API tem quantidade relevante de nomes duplicados. Pode afetar análises que deendam disso.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/-Repositorio-DS/fastpages/jupyter/data%20exploration/2021/11/20/_11_20_An%C3%A1lise_explorat%C3%B3ria_AirBnb_via_API.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/-Repositorio-DS/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/-Repositorio-DS/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
