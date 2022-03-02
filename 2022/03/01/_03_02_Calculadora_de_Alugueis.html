@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Conclusão | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Conclusão" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://vinicius-l-r-matos.github.io/-Repositorio-DS/2022/03/01/_03_02_Calculadora_de_Alugueis.html" />
+<meta property="og:url" content="https://vinicius-l-r-matos.github.io/-Repositorio-DS/2022/03/01/_03_02_Calculadora_de_Alugueis.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-01T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2022-03-01T00:00:00-06:00","url":"https://vinicius-l-r-matos.github.io/-Repositorio-DS/2022/03/01/_03_02_Calculadora_de_Alugueis.html","@type":"BlogPosting","headline":"Conclusão","dateModified":"2022-03-01T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://vinicius-l-r-matos.github.io/-Repositorio-DS/2022/03/01/_03_02_Calculadora_de_Alugueis.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/-Repositorio-DS/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vinicius-l-r-matos.github.io/-Repositorio-DS/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/-Repositorio-DS/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/-Repositorio-DS/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/-Repositorio-DS/about/">Sobre Mim</a><a class="page-link" href="/-Repositorio-DS/search/">Search</a><a class="page-link" href="/-Repositorio-DS/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Conclusão</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-03-01T00:00:00-06:00" itemprop="datePublished">
+        Mar 1, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      16 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Vinicius-L-R-Matos/-Repositorio-DS/tree/master/_notebooks/2022_03_02_Calculadora_de_Alugueis.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Vinicius-L-R-Matos/-Repositorio-DS/master?filepath=_notebooks%2F2022_03_02_Calculadora_de_Alugueis.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Vinicius-L-R-Matos/-Repositorio-DS/blob/master/_notebooks/2022_03_02_Calculadora_de_Alugueis.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/-Repositorio-DS/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022_03_02_Calculadora_de_Alugueis.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Vinicius-L-R-Matos/-Repositorio-DS/blob/master/_notebooks/2022_03_02_Calculadora_de_Alugueis.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Calculadora-de-Alugueis">Calculadora de Alugueis<a class="anchor-link" href="#Calculadora-de-Alugueis"> </a></h1><blockquote><p>"Da coleta até a aplicação:Um estudo de caso"</p>
+<ul>
+<li>toc: false</li>
+<li>branch: master</li>
+<li>badges: true</li>
+<li>comments: false</li>
+<li>categories: [fastpages, jupyter, Data exploration]</li>
+<li>hide: false</li>
+<li>author: Vinicius Matos</li>
+</ul>
+</blockquote>
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introdu&#231;&#227;o">Introdu&#231;&#227;o<a class="anchor-link" href="#Introdu&#231;&#227;o"> </a></h2><p>Existe uma lenda que corre entre os matemáticos desde o século 13. 
+Ela que chegou à nossa língua por meio do livro: O Homem que Calculava, de 1937.</p>
+<p>O autor é: Malba Tahan, um pseudônimo do engenheiro carioca: Júlio Cesar de Mello e Souza (1895-1974).</p>
+<p>Conta-se que o rei da província de Telengana, no sul da Índia, não estava bem. Tinha acabado de perder um filho no campo de batalha e agora passava seus dias remoendo a tristeza.</p>
+<p>As notícias sobre a depressão do monarca espalharam-se pelo reino. Um jovem, então, foi ao palácio e pediu uma audiência.</p>
+<p>Dizia ser Lahur Sessa e que acabara de Invententar um jogo, que poderia trazer novas alegrias ao rei.</p>
+<p>Ele trazia um tabuleiro quadrado, dividido em 64 casas. Mais 32 peças, representando soldados, cavalaria, torres de defesa. Ente outros. Era um protótipode 'Chaturanga' (Que deu origem ao nosso atual 'Xadrez').</p>
+<p>Ele então viu, jogou e adorou. Ficou tão contente que ofereceu o que ele quisesse como recompensa: ouro, terras ou um palácio. Deu sua palavra. Não importando a quantidade.</p>
+<p>O jovem disse que não lhe interessava nenhum desses luxos. Bastavam-lhe grãos de trigo.</p>
+<p>O soberano riu com soberba e logo aceitou. Foi então que o inventor revelou:
+Que deveria preencher cada casa do tabuleiro com o dobro da quantidade de grãos da anteriormente preenchida, até que todas as 64 estivessem completas.</p>
+<p>Então, assim se seguiu:</p>
+<ul>
+<li>Casa 1ª, 1 grão de trigo;</li>
+<li>Casa 2ª, 2 grãos de trigo;</li>
+<li>Casa 3ª, 4 grãos de trigo;</li>
+<li>Casa 4ª, 8 grãos de trigo;</li>
+<li>...</li>
+<li>Casa 9ª, 512 grãos;</li>
+<li>...</li>
+<li>Casa 18ª, 262 mil;</li>
+<li>...</li>
+<li>Casa 27ª, 134 milhões;</li>
+<li>...</li>
+<li>Casa 33ª, 8,5 bilhões;</li>
+<li>...</li>
+</ul>
+<p>No quadrado final, a Casa 64ª, fechava-se a conta: 
+18.446.744.073.709.551.615 grãos de trigo.
+18 sextilhões. Podemos arredondar para o número 18 seguido de 21 'zeros'.</p>
+<p>Para dar uma ideia do que esse número significa: Estima-se hoje que o número de grãos de areia na Terra seja de 18 quintilhões.  Ou 18 seguido de 18 'zeros'.</p>
+<p>Sem perceber, o monarcarca arcou com uma dívida infundada. Impossível de ser paga. Pois era o equivalente a todos os grãos de areia de mil planetas Terra.</p>
+<p>Algo mundano como um tabuleiro de 64 casas pode carregar dentro de si um número que, para os nossos cérebros, é indiscernível do infinito.</p>
+<p>É uma história que ensina sobre investimento. Sobre atribuir valor. Arcar com escolhas e sobre arrependimento. A somatória das pequenas coisas podendo afetar o todo.</p>
+<p>Todos querem lucras como o inventor da história.</p>
+<p>Ninguém quer pagar a soma do monarca.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sobre-este-notebook">Sobre este notebook<a class="anchor-link" href="#Sobre-este-notebook"> </a></h2><p>Portanto, um tabuleiro que ajudasse a atribuir preços justos, afim de que não mais se vangloriem os inventores ou saiam derrotados os monarcas, poderia ajudar aqueles que buscam obter, negociar ou arrendar seus bens. Entre o cenário todos os tipos possíveis, mais comum: Um imóvel.</p>
+<p>Seria possível criar uma máquina que me entregue o valor justo, competitivo ou atraente de um imóvel por meio dos dados diponíveis?</p>
+<p>Para tal, foi desenvolvido este notebook. Ele parte do zero, para um sistema que procesa as informações e entrega a classificação.</p>
+<p>Ele foi separado em diferentes estágios até sua função plena:</p>
+<ol>
+<li>Raspagem de dados</li>
+<li>Manipulação dos dados</li>
+<li>Modelagem</li>
+<li>Otimização</li>
+<li>Salvando</li>
+<li>Deploy</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Abaixo uma lista de todos os módulos usados para este projeto:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">click==8.0.3</span>
+<span class="sd">Flask==2.0.3</span>
+<span class="sd">gunicorn==20.1.0</span>
+<span class="sd">importlib-metadata==4.11.1</span>
+<span class="sd">itsdangerous==2.0.1</span>
+<span class="sd">Jinja2==3.0.3</span>
+<span class="sd">joblib==1.1.0</span>
+<span class="sd">MarkupSafe==2.0.1</span>
+<span class="sd">numpy==1.21.5</span>
+<span class="sd">pandas==1.3.5</span>
+<span class="sd">python-dateutil==2.8.2</span>
+<span class="sd">pytz==2021.3</span>
+<span class="sd">scikit-learn==1.0.2</span>
+<span class="sd">scipy==1.7.3</span>
+<span class="sd">six==1.16.0</span>
+<span class="sd">sklearn==0.0</span>
+<span class="sd">threadpoolctl==3.1.0</span>
+<span class="sd">typing-extensions==4.1.1</span>
+<span class="sd">Werkzeug==2.0.3</span>
+<span class="sd">zipp==3.7.0</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.Raspagem-de-dados">1.Raspagem de dados<a class="anchor-link" href="#1.Raspagem-de-dados"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Aqui usaremos a biblioteca 'Selenium' para realizar a obtenção dos dados. 
+Por meio disso será possível acessar o site e obter informações contidas em campos do 'html' contidos em sua estrutura, visível nas ferramentas para o desenvolvedor e armazena-los em variáveis que serão usadas mais à frente.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Importando Pandas:</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+
+<span class="c1"># Definindo url a ser usada:</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.zapimoveis.com.br/aluguel/imoveis/rj+rio-de-janeiro/?gclid=EAIaIQobChMIr87tpubZ9QIVDwuRCh2R_QFZEAAYAyAAEgLqgPD_BwE&amp;utm_referrer=https%3A</span><span class="si">%2F%2F</span><span class="s1">www.google.com</span><span class="si">%2F</span><span class="s1">&#39;</span>
+
+<span class="c1"># Entrando na página:</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="s1">&#39;chromedriver&#39;</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Esperar o carregamento da página:</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+        <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;simple-card__price&quot;</span><span class="p">))</span>
+    <span class="p">)</span>
+<span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O carregamento da página demorou muito tempo&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">cards</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;card-container&#39;</span><span class="p">)</span>
+
+<span class="c1"># criar um dataframe:</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+    <span class="s1">&#39;preco&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;condominio&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;endereço&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;area&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quartos&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;vagas&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;banheiros&#39;</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+    <span class="s1">&#39;preco&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;condominio&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;endereço&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;area&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quartos&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;vagas&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;banheiros&#39;</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">len_df</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">len_df</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="c1"># scroll down:</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span><span class="p">)</span>
+    <span class="c1"># pegar a lista de cards:</span>
+    <span class="n">cards</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;card-container&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
+        <span class="c1"># search for itemprop=&quot;floorSize&quot; in card[1]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">floor_size</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;js-areas&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bedrooms</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;js-bedrooms&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">bedrooms</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">parking_spaces</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;js-parking-spaces&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">parking_spaces</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bathrooms</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;js-bathrooms&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">bathrooms</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;simple-card__price&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">condominio</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;card-price__value&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">condominio</span> <span class="o">=</span> <span class="mi">0</span>
+       
+        <span class="n">address</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s1">&#39;simple-card__address&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+
+        <span class="c1"># print(&#39;price:&#39;, price, &#39;condominio:&#39;, condominio, &#39;address:&#39;, address)</span>
+
+        <span class="c1"># print(&#39;floor_size:&#39;, floor_size, &#39;bedrooms:&#39;, bedrooms, &#39;parking_spaces:&#39;, parking_spaces, &#39;bathrooms:&#39;, bathrooms)</span>
+        
+        <span class="c1"># adicionar os dados ao dataframe:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;preco&#39;</span><span class="p">:</span> <span class="n">price</span><span class="p">,</span>
+            <span class="s1">&#39;condominio&#39;</span><span class="p">:</span> <span class="n">condominio</span><span class="p">,</span>
+            <span class="s1">&#39;endereço&#39;</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
+            <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">floor_size</span><span class="p">,</span>
+            <span class="s1">&#39;quartos&#39;</span><span class="p">:</span> <span class="n">bedrooms</span><span class="p">,</span>
+            <span class="s1">&#39;vagas&#39;</span><span class="p">:</span> <span class="n">parking_spaces</span><span class="p">,</span>
+            <span class="s1">&#39;banheiros&#39;</span><span class="p">:</span> <span class="n">bathrooms</span>
+        <span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">len_df</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;len_df:&#39;</span><span class="p">,</span> <span class="n">len_df</span><span class="p">,</span> <span class="s1">&#39;/10000&#39;</span><span class="p">)</span>
+    <span class="c1"># display(df)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># click in button with class pagination__button--next</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://www.zapimoveis.com.br/aluguel/imoveis/rj+rio-de-janeiro/?pagina=</span><span class="si">{</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&amp;onde=,Rio%20de%20Janeiro,Rio%20de%20Janeiro,,,,,CITY,BR%3ERio%20de%20Janeiro%3ENULL%3ERio%20de%20Janeiro,-22.906847,-43.172897&amp;transacao=Aluguel&amp;tipo=Im%C3%B3vel%20usado&#39;</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Manipula&#231;&#227;o-dos-dados">2. Manipula&#231;&#227;o dos dados<a class="anchor-link" href="#2.-Manipula&#231;&#227;o-dos-dados"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;preco&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;preco&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;condominio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;condominio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;preco_total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;preco&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;condominio&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;, Rio de Janeiro&#39;</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;endereço&#39;</span><span class="p">]:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;endereço&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;endereço&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;, Rio de Janeiro&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;endereço&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;endereço&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;endereço&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;endereço&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># remove all &#39; &#39; from &#39;bairro&#39; column:</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;preco_total&#39;</span><span class="p">:</span> <span class="s1">&#39;aluguel&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">,</span> <span class="s1">&#39;bairro&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;quartos&#39;</span><span class="p">,</span> <span class="s1">&#39;vagas&#39;</span><span class="p">,</span> <span class="s1">&#39;banheiros&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">],</span> <span class="n">dummies</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dummies</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">dummies</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis_processada.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Modelagem">3. Modelagem<a class="anchor-link" href="#3.-Modelagem"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">nd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="c1"># import sklearn logistic regression</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="c1"># import sklearn k-nearst neighbors</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="c1"># import sklearn support vector machine</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="c1"># import sklearn naive bayes</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="c1"># import sklearn decision tree</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="c1"># import sklearn random forest</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis_processada.csv&#39;</span><span class="p">)</span>
+<span class="n">alugueis</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">var_summary</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>  <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.10</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.90</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;NMISS&#39;</span><span class="p">,</span> <span class="s1">&#39;SUM&#39;</span><span class="p">,</span> <span class="s1">&#39;MEAN&#39;</span><span class="p">,</span><span class="s1">&#39;MEDIAN&#39;</span><span class="p">,</span> <span class="s1">&#39;STD&#39;</span><span class="p">,</span> <span class="s1">&#39;VAR&#39;</span><span class="p">,</span> <span class="s1">&#39;MIN&#39;</span><span class="p">,</span> <span class="s1">&#39;P1&#39;</span> <span class="p">,</span> <span class="s1">&#39;P5&#39;</span> <span class="p">,</span><span class="s1">&#39;P10&#39;</span> <span class="p">,</span><span class="s1">&#39;P25&#39;</span> <span class="p">,</span><span class="s1">&#39;P50&#39;</span> <span class="p">,</span><span class="s1">&#39;P75&#39;</span> <span class="p">,</span><span class="s1">&#39;P90&#39;</span> <span class="p">,</span><span class="s1">&#39;P95&#39;</span> <span class="p">,</span><span class="s1">&#39;P99&#39;</span> <span class="p">,</span><span class="s1">&#39;MAX&#39;</span><span class="p">])</span>
+
+<span class="n">numerical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;quartos&#39;</span><span class="p">,</span> <span class="s1">&#39;vagas&#39;</span><span class="p">,</span> <span class="s1">&#39;banheiros&#39;</span><span class="p">]</span>
+<span class="n">alugueis</span><span class="p">[</span><span class="n">numerical_features</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">var_summary</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span>
+<span class="n">numerical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;quartos&#39;</span><span class="p">,</span> <span class="s1">&#39;banheiros&#39;</span><span class="p">,</span> <span class="s1">&#39;vagas&#39;</span><span class="p">,</span> <span class="s1">&#39;aluguel&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
+<span class="c1"># plot one histogram for each numerical feature</span>
+<span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">numerical_features</span><span class="p">:</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">alugueis</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">feature</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">bairros</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">categorical_features</span><span class="p">:</span>
+    <span class="n">bairros</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">feature</span><span class="p">,</span> <span class="n">alugueis</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()])</span>
+
+<span class="c1"># order list by bairros[1] in descending order</span>
+<span class="n">bairros</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">bairros</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">avg_rents</span> <span class="o">=</span> <span class="n">alugueis</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bairro&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[[</span><span class="s1">&#39;bairro&#39;</span><span class="p">,</span> <span class="s1">&#39;aluguel&#39;</span><span class="p">]]</span>
+<span class="n">avg_rents</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">avg_rents</span><span class="o">.</span><span class="n">aluguel</span><span class="p">]</span>
+<span class="n">avg_rents</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plot boxplot for each bairro</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;bairro&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;aluguel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">avg_rents</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+<span class="c1"># rotate x-axis labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Os preço medio em bairros acima como Guadalupe, Pavuna e Santo Cristo se justificam por terem muitos imóveis inteiros em aluguel, como galpões e prédios.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">alugueis</span><span class="p">[</span><span class="n">numerical_features</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>fatores como area, banheiro e vagas aparentam ter um efeito maior no preço do aluguel. Porém sem dúvida o bairro do imóvel também tem um peso.
+Fiquei curioso em entender como o numero de quartos não se correlaciona com o preço, e irei plotar um gráfico para verificar:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;quartos&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;aluguel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">alugueis</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Os galpões parecem de alguma maneira afetar essa variável, penso em remover os imóveis que não possuem nenhum quarto de nossa análise, abaixo considerarei essa opção</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis_modificada</span> <span class="o">=</span> <span class="n">alugueis</span><span class="p">[</span><span class="n">alugueis</span><span class="o">.</span><span class="n">quartos</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">alugueis_modificada</span><span class="p">[</span><span class="n">numerical_features</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">var_summary</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;quartos&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;aluguel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">alugueis_modificada</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">alugueis_modificada</span><span class="p">[</span><span class="n">numerical_features</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Como a matriz de correlação aparenta fazer um pouco mais de sentido, criarei o modelo com base em alugueis_modificada</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">train_set</span><span class="p">,</span> <span class="n">test_set</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">alugueis</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;bairro&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># add all models imported above</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">LogisticRegression</span><span class="p">(),</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">(),</span>
+    <span class="n">SVC</span><span class="p">(),</span>
+    <span class="n">GaussianNB</span><span class="p">(),</span>
+    <span class="n">DecisionTreeClassifier</span><span class="p">(),</span>
+    <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># create a list of model names</span>
+<span class="n">model_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Logistic Regression&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;K-Nearest Neighbors&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Support Vector Machine&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Naive Bayes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Decision Tree&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Random Forest&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># create a dataframe to store the results</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;Score&#39;</span><span class="p">])</span>
+
+<span class="c1"># loop through the models</span>
+<span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">model_names</span><span class="p">):</span>
+    <span class="c1"># train the model</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">train_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+    <span class="c1"># make predictions</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="n">features</span><span class="p">])</span>
+    <span class="c1"># calculate the score</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">test_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+    <span class="c1"># store the results</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Model&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;Score&#39;</span><span class="p">:</span> <span class="n">score</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">results</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Otimiza&#231;&#227;o">4. Otimiza&#231;&#227;o<a class="anchor-link" href="#4.-Otimiza&#231;&#227;o"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># hyperparameter tuning for decision tree classifier:</span>
+<span class="c1"># create a list of hyperparameters</span>
+<span class="n">hyperparameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+    <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+    <span class="s1">&#39;criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="s2">&quot;sqrt&quot;</span><span class="p">,</span> <span class="s2">&quot;log2&quot;</span><span class="p">],</span>
+    <span class="s1">&#39;class_weight&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;balanced&#39;</span><span class="p">]</span>
+
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">decision_tree_classifier</span><span class="p">(</span><span class="n">hyperparameters</span><span class="p">):</span>
+    <span class="c1"># create a decision tree classifier</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+    <span class="c1"># create a grid search object</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">hyperparameters</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># fit the data</span>
+    <span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">train_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+    <span class="c1"># return the grid search object</span>
+    <span class="k">return</span> <span class="n">gs</span>
+
+<span class="c1"># get results:</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">decision_tree_classifier</span><span class="p">(</span><span class="n">hyperparameters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Best Score is &#39;</span><span class="p">,</span><span class="n">gs</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gs</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="s1">&#39;are the params&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">var_summary</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>  <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">var</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.10</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.90</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">),</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;NMISS&#39;</span><span class="p">,</span> <span class="s1">&#39;SUM&#39;</span><span class="p">,</span> <span class="s1">&#39;MEAN&#39;</span><span class="p">,</span><span class="s1">&#39;MEDIAN&#39;</span><span class="p">,</span> <span class="s1">&#39;STD&#39;</span><span class="p">,</span> <span class="s1">&#39;VAR&#39;</span><span class="p">,</span> <span class="s1">&#39;MIN&#39;</span><span class="p">,</span> <span class="s1">&#39;P1&#39;</span> <span class="p">,</span> <span class="s1">&#39;P5&#39;</span> <span class="p">,</span><span class="s1">&#39;P10&#39;</span> <span class="p">,</span><span class="s1">&#39;P25&#39;</span> <span class="p">,</span><span class="s1">&#39;P50&#39;</span> <span class="p">,</span><span class="s1">&#39;P75&#39;</span> <span class="p">,</span><span class="s1">&#39;P90&#39;</span> <span class="p">,</span><span class="s1">&#39;P95&#39;</span> <span class="p">,</span><span class="s1">&#39;P99&#39;</span> <span class="p">,</span><span class="s1">&#39;MAX&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># see the list of predictions in comparison with the test set</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="n">features</span><span class="p">])</span>
+
+<span class="c1"># create a dataframe to compare predictions with &#39;aluguel&#39;</span>
+<span class="n">compare</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+<span class="n">compare</span><span class="p">[</span><span class="s1">&#39;predictions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictions</span>
+<span class="n">compare</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">compare</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">compare</span><span class="p">[</span><span class="s1">&#39;predictions&#39;</span><span class="p">]</span>
+<span class="n">compare</span><span class="p">[</span><span class="s1">&#39;percent_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">compare</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">compare</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">]</span> <span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">compare</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">var_summary</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A media do erro na previsão é de 0,07%, com desvio padrão de 4.5 pontos percentuais, o que sifnifica que em 95% das previsões o valor do aluguel tem uma diferença de menos de 1% para o valor real de um apartamento nas condições apresentadas</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Salvando">5. Salvando<a class="anchor-link" href="#5.-Salvando"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">model_selection</span><span class="p">,</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">alugueis</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis_processada.csv&#39;</span><span class="p">)</span>
+<span class="n">alugueis</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">train_set</span><span class="p">,</span> <span class="n">test_set</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">alugueis</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;bairro&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">features_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">features_list</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;features_list.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">198</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;sqrt&#39;</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">train_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+    
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;calculadora-de-aluguel-model.joblib&quot;</span>
+
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">imovel</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span> <span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">imovel</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;calculadora-de-aluguel-model.joblib&quot;</span>
+
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.Deploy">6.Deploy<a class="anchor-link" href="#6.Deploy"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Abaixo se encontra a solução com o passo a passo para final importada para o formato legivel via <a href="https://medium.com/data-hackers/deploy-flask-api-using-heroku-d5c7128481b7">Heroku</a>.</p>
+<p>Esta é uma plataforma em nuvem, como o conceito de platform as a service (PaaS) que suporta várias linguagens de programação. Entre elas o Python.</p>
+<p>Para se contruir um modelo igual, é necessário também o cadastro no <a href="https://git-scm.com/">Git</a>, a fim de realizar o controle de versionamento do seu código. Portanto é necessário antes de implementar o modelo, seguir com sua instalação completamnte.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>No terminal do Git, abra a pasta do projeto:</p>
+<blockquote><p>cd \users\desktop\flask{coloque o nome de seu arquivo.py aqui}</p>
+</blockquote>
+<p>Em seguida, digite o código abaixo para fazer login no Heroku:&gt;   heroku login
+Note que depois disso, aparecerá a mensagem abaixo:</p>
+<blockquote><p>heroku:Press any key to open up the browser to login or q to exit:
+Pressione qualquer tecla para fazer login, em seguida, ele abrirá uma janela, com o site do Heroku para inserir email e senha. Realize seu login aqui.
+Feito isso, no terminal, você receberá a mensagem abaixo:
+Opening browser to <a href="https://cli-auth.heroku.com/auth/cli/browser/&gt;">https://cli-auth.heroku.com/auth/cli/browser/&gt;</a> b166712b-6219-4430-9f61-2ccef9cdbc83
+  Logging in... done
+  Logged in as youraccount@gmail.com</p>
+</blockquote>
+<p>Agora vamos ativar o ambiente virtual (aqui no caso para Windowns):&gt;   venv\Scripts\activate
+É interessante verificar se todas as bibliotecas necessárias para executar o seu projeto estão instaladas; para isso use o comando abaixo para listar todas elas:</p>
+<blockquote><p>pip freeze</p>
+</blockquote>
+<p>Outro ponto importante é instalar o Gunicorn, ele será usado como nosso servidor WSGI Python:&gt;   pip install gunicorn
+O Heroku precisa conhecer as dependências do nosso aplicativo para que no momento do deploy crie o ambiente corretamente, utilizei o pip freeze apontando para requirements.txt:</p>
+<blockquote><p>pip freeze &gt; requirements.txt</p>
+</blockquote>
+<p>Agora, criaremos o arquivo Procfile, onde será gravado o comando que o Heroku deve usar para executar nosso aplicativo. Basicamente, o mesmo comando que usaríamos para executar o aplicativo localmente. o mesmo deve permanecer na raiz do projeto.</p>
+<blockquote><p>echo "web:gunicorn app:app" &gt; Procfile
+Agora vamos criar um repositório no diretório atual usando o comando git init:
+git init</p>
+</blockquote>
+<p>Vamos criar um arquivo chamado .gitignore, nele colocaremos todos os arquivos que não queremos que sejam lidos o seu conteúdo, para o nosso cenário colocaremos apenas nosso ambiente virtual “venv”.
+Vamos adicionar todos os arquivos ao nosso repositório usando git add:&gt;   git add .
+Agora vamos criar nosso commit inicial:</p>
+<blockquote><p>git commit -m "initial commit"</p>
+</blockquote>
+<p>Agora vamos criar nosso aplicativo no Heroku usando o comando heroku apps:create [app name], neste caso, eu chamo meu aplicativo:&gt; heroku apps:create app name
+Assim que criada, a mensagem abaixo será impressa:</p>
+<blockquote><p>Creating ⬢ app name... done
+<a href="https://app">https://app</a> name.herokuapp.com/ | <a href="https://git.heroku.com/app">https://git.heroku.com/app</a> name.git
+Observe que a URL do API e do repositório git foi retornada na mensagem acima para onde nosso aplicativo foi enviado.
+Para o deploy nosso aplicativo, basta enviar as confirmações do repositório local para o repositório heroku, usando o comando git push heroku master:
+git push heroku master</p>
+</blockquote>
+<p>Em seguida, aparece uma mensagem abaixo:remote: Verifying deploy... done.To <a href="https://git.heroku.com/app">https://git.heroku.com/app</a> name.git</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">model_selection</span><span class="p">,</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">alugueis</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;lista_de_alugueis_processada.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># separe os dados em treino e teste</span>
+<span class="n">train_set</span><span class="p">,</span> <span class="n">test_set</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">alugueis</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;bairro&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># save features list t csv</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">features_list</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;features_list.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1">#Precisei diminuir max depth de 28 para 11 para que heroku app tenha menos que 1GB de memória</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">198</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;sqrt&#39;</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">train_set</span><span class="p">[</span><span class="s1">&#39;aluguel&#39;</span><span class="p">])</span>
+    
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;calculadora-de-aluguel-model.joblib&quot;</span>
+
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Prevendo o aluguel de 10 imóveis</span>
+<span class="n">imovel</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span> <span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">imovel</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;calculadora-de-aluguel-model.joblib&quot;</span>
+
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_set</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">curses</span> <span class="kn">import</span> <span class="n">pair_content</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;calculadora-front-end.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/calcular&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">calcular</span><span class="p">():</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
+    <span class="n">bairro</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span>
+    <span class="n">quartos</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;quartos&#39;</span><span class="p">]</span>
+    <span class="n">vagas</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;vagas&#39;</span><span class="p">]</span>
+    <span class="n">banheiros</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;banheiros&#39;</span><span class="p">]</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;features_list.csv&#39;</span><span class="p">)[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">features</span><span class="p">)</span>
+
+    <span class="c1"># make all the bairro_ values in the payload 0</span>
+    <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;bairro_&#39;</span> <span class="ow">in</span> <span class="n">feature</span><span class="p">:</span>
+            <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;bairro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bairro</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;quartos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">quartos</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;vagas&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vagas</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;banheiros&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">banheiros</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;bairro_</span><span class="si">{</span><span class="n">bairro</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># passing values to model and getting the prediction</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;calculadora-de-aluguel-model.joblib&quot;</span>
+
+    <span class="n">loaded_model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">payload</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;aluguel&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;aluguel_calculado.html&#39;</span><span class="p">,</span> <span class="n">aluguel</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="c1">#######  YAY, I AM THE SOURCE EDITOR! #########--&gt;</span>
+<span class="o">&lt;</span><span class="n">h1</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: #5e9ca0;&quot;</span><span class="o">&gt;</span><span class="n">Calculadora</span> <span class="n">de</span> <span class="n">Aluguel</span> <span class="n">da</span> <span class="n">cidade</span> <span class="n">do</span> <span class="n">Rio</span> <span class="n">de</span> <span class="n">Janeiro</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">h2</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: #2e6c80;&quot;</span><span class="o">&gt;</span><span class="n">Adicione</span> <span class="n">abaixo</span> <span class="n">caracteristicas</span> <span class="n">do</span> <span class="n">apartamento</span> <span class="n">e</span> <span class="n">receba</span> <span class="n">o</span> <span class="n">valor</span> <span class="n">do</span> <span class="n">aluguel</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Make</span> <span class="nb">all</span> <span class="n">text</span> <span class="n">above</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">color</span> <span class="n">pallete</span><span class="p">:</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">h4</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: #25405f;&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;{{ url_for(&#39;calcular&#39;) }}&quot;</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">Aacute</span><span class="p">;</span><span class="n">rea</span> <span class="p">(</span><span class="n">m</span><span class="o">&lt;</span><span class="n">sup</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">sup</span><span class="o">&gt;</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;area&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;65&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">Quartos</span><span class="p">:</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;quartos&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">Vagas</span><span class="p">:</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;vagas&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">Banheiros</span><span class="p">:</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;banheiros&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">Bairro</span><span class="p">:</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;bairros&quot;</span> <span class="nb">list</span><span class="o">=</span><span class="s2">&quot;bairros-list&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bairro&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">datalist</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;bairros-list&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Abolição&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Anchieta&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Andaraí&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Anil&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Arpoador&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Bancários&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Bangu&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;BarradaTijuca&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;BarrosFilho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Benfica&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;BentoRibeiro&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Bonsucesso&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Botafogo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;BrazdePina&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;BrásdePina&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cachambi&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cacuia&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Caju&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Camorim&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Campinho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;CampoGrande&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cascadura&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Castelo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Catete&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Catumbi&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cavalcânti&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Centro&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;CidadeNova&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;CoelhoNeto&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Colégio&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Copacabana&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cordovil&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;CosmeVelho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Cosmos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Curicica&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;DelCastilho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Encantado&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;EngenheiroLeal&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;EngenhoDaRainha&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;EngenhoDeDentro&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;EngenhoNovo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Estacio&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Flamengo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Freguesia&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Freguesia-Jacarepaguá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Fátima&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Gamboa&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Glória&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Grajaú&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Grumari&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Guadalupe&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Guaratiba&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Gávea&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Higienópolis&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;HonórioGurgel&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Humaitá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;IlhadoGovernador&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Inhaúma&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Inhoaíba&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Ipanema&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Irajá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Itanhangá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Jacarepaguá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Jacaré&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimAmérica&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimBotânico&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimCarioca&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimGuanabara&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimOceanico&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;JardimSulacap&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Lagoa&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Lapa&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Laranjeiras&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Leblon&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Leme&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;LinsdeVasconcelos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Madureira&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;MagalhãesBastos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Manguinhos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Maracanã&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;MarechalHermes&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;MariadaGraça&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Moneró&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Méier&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Olaria&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;OswaldoCruz&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Paciência&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;ParadadeLucas&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Pavuna&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Pechincha&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Penha&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;PenhaCircular&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Piedade&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Pilares&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Pitangueiras&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Portuguesa&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;PraiadaBandeira&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;PraçaSeca&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;PraçadaBandeira&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;QuintinoBocaiúva&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Ramos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Realengo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;RecreioDosBandeirantes&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Riachuelo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Ribeira&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;RicardodeAlbuquerque&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;RioComprido&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Rocha&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;RochaMiranda&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Sampaio&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SantaCruz&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SantaTeresa&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SantoCristo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Santíssimo&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Saúde&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SenadorCamará&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SenadorVasconcelos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Sepetiba&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SãoConrado&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SãoCristóvão&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;SãoFranciscoXavier&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Tanque&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Taquara&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Tauá&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Tijuca&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;TodososSantos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;TomásCoelho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Turiaçu&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Urca&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VargemGrande&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VargemPequena&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VicentedeCarvalho&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Vidigal&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VigárioGeral&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VilaIsabel&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VilaKosmos&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VilaValqueire&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;ViladaPenha&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VistaAlegre&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">option</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;ÁguaSanta&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">datalist</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="err">!</span><span class="o">---</span> <span class="n">Adicione</span> <span class="n">botão</span> <span class="n">de</span> <span class="n">calcular</span><span class="p">,</span> <span class="n">que</span> <span class="n">envia</span> <span class="n">dados</span> <span class="n">acima</span> <span class="n">inseridos</span> <span class="n">para</span> <span class="n">back</span><span class="o">-</span><span class="n">end</span><span class="o">.</span><span class="n">py</span> <span class="o">--&gt;</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Calcular&quot;</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="nb">set</span> <span class="n">tittle</span> <span class="s2">&quot;Aluguel Calculado&quot;</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">h1</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: #5e9ca0;&quot;</span><span class="o">&gt;</span><span class="n">Calculadora</span> <span class="n">de</span> <span class="n">Aluguel</span> <span class="n">da</span> <span class="n">cidade</span> <span class="n">do</span> <span class="n">Rio</span> <span class="n">de</span> <span class="n">Janeiro</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">aluguel</span> <span class="n">who</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">aluguel</span> <span class="n">variable</span><span class="p">:</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">h2</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: #2e6c80;&quot;</span><span class="o">&gt;</span><span class="n">Valor</span> <span class="n">do</span> <span class="n">Aluguel</span><span class="p">:</span> <span class="n">R</span><span class="err">$</span> <span class="p">{{</span> <span class="n">aluguel</span> <span class="p">}},</span><span class="mi">00</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Add</span> <span class="n">back</span> <span class="n">button</span><span class="p">:</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ url_for(&#39;index&#39;) }}&quot;</span><span class="o">&gt;</span><span class="n">Voltar</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Portanto, segue aqui o resultado final do projeto:
+Um aplicativo web que reindeniza o modelo dentro dos parâmetros solicitados.</p>
+<p><a href="https://calculadora-de-alugueis-awari.herokuapp.com/">Calculadora pronta</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/-Repositorio-DS/2022/03/01/_03_02_Calculadora_de_Alugueis.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/-Repositorio-DS/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/-Repositorio-DS/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/-Repositorio-DS/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
